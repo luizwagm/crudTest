@@ -51,7 +51,7 @@ class peopleRepository
 
     public function get()
     {
-        $query = $this->pdo->prepare('SELECT * FROM ' . $this->model->table . ' AND deleted_at = null');
+        $query = $this->pdo->prepare('SELECT * FROM ' . $this->model->table . ' WHERE deleted_at IS NULL');
         $query->execute();
         
         return $query->fetchAll();
@@ -59,11 +59,11 @@ class peopleRepository
 
     public function first($id)
     {
-        $query = $this->pdo->prepare('SELECT * FROM ' . $this->model->table . ' WHERE id = :id AND deleted_at = null');
+        $query = $this->pdo->prepare('SELECT * FROM ' . $this->model->table . ' WHERE id = :id');
         $query->bindValue(":id", $id, PDO::PARAM_INT);
         $query->execute();
         
-        return $query->fetchAll();
+        return $query->fetch();
     }
 
     public function delete($id)

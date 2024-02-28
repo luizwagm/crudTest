@@ -13,6 +13,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         ),
         'A' => 
         array (
+            'App\\Validation\\' => 15,
             'App\\Service\\' => 12,
             'App\\Repository\\' => 15,
             'App\\Model\\' => 10,
@@ -26,6 +27,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'Database\\Migrations\\' => 
         array (
             0 => __DIR__ . '/../..' . '/database/migrations',
+        ),
+        'App\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/validation',
         ),
         'App\\Service\\' => 
         array (
@@ -57,9 +62,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'App\\Configs\\Config' => __DIR__ . '/../..' . '/app/configs/Config.php',
         'App\\Configs\\SQLiteConnection' => __DIR__ . '/../..' . '/app/configs/SQLiteConnection.php',
         'App\\Controller\\crudController' => __DIR__ . '/../..' . '/app/controller/crudController.php',
-        'App\\Model\\crudModel' => __DIR__ . '/../..' . '/app/model/crudModel.php',
-        'App\\Repository\\crudRepository' => __DIR__ . '/../..' . '/app/repository/crudRepository.php',
+        'App\\Model\\peopleModel' => __DIR__ . '/../..' . '/app/model/peopleModel.php',
+        'App\\Repository\\peopleRepository' => __DIR__ . '/../..' . '/app/repository/peopleRepository.php',
         'App\\Service\\crudService' => __DIR__ . '/../..' . '/app/service/crudService.php',
+        'App\\Validation\\inputValidation' => __DIR__ . '/../..' . '/app/validation/inputValidation.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database\\Migrations\\CreatePeopleTable' => __DIR__ . '/../..' . '/database/migrations/CreatePeopleTable.php',
     );
