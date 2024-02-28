@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Configs\\": "app/configs",
+            "App\\Repository\\": "app/repository",
+            "App\\Service\\": "app/service",
+            "App\\Controller\\": "app/controller",
+            "App\\Model\\": "app/model",
+            "App\\Validation\\": "app/validation",
+            "Database\\Migrations\\": "database/migrations"
+        }
+    }
+}
