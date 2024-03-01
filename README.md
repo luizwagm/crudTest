@@ -6,8 +6,6 @@ PHP >8
 
 composer
 
-SQLite3
-
 ## Instalação
 
 composer install

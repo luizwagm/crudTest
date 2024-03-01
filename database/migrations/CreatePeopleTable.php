@@ -4,7 +4,7 @@ namespace Database\Migrations;
 
 class CreatePeopleTable
 {
-    private static $pdo;
+    private $pdo;
 
     public function __construct($pdo)
     {
@@ -19,6 +19,7 @@ class CreatePeopleTable
             echo 'Create table sucessfull';
         } catch (\PDOException $e) {
             echo 'Table not create';
+            die($e->getMessage());
         }
     }
 
@@ -26,13 +27,13 @@ class CreatePeopleTable
     {
         $commands = [
             'CREATE TABLE IF NOT EXISTS people (
-                id   INTEGER PRIMARY KEY NOT NULL,
+                id   SERIAL PRIMARY KEY NOT NULL,
                 fullname VARCHAR(255) NOT NULL,
                 document  VARCHAR(11) NOT NULL,
                 email VARCHAR(100) NOT NULL,
-                created_at DATETIME NOT NULL,
-                updated_at DATETIME NOT NULL,
-                deleted_at DATETIME NULL
+                created_at TIMESTAMPTZ NULL DEFAULT NULL,
+                updated_at TIMESTAMPTZ NULL DEFAULT NULL,
+                deleted_at TIMESTAMPTZ NULL DEFAULT NULL
             )'
         ];
         

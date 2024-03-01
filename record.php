@@ -2,10 +2,13 @@
 
 require 'vendor/autoload.php';
 
-use App\Configs\SQLiteConnection;
-use App\Controller\crudController;
+$dotenv = Dotenv\Dotenv::createMutable(__DIR__);
+$dotenv->load();
 
-$pdo = (new SQLiteConnection())->connect();
+use App\Controller\crudController;
+use App\Configs\ConnectDB;
+
+$pdo = (new ConnectDB($_ENV))->connect();
 $exec = (new crudController($pdo));
 
 $getAction = $_GET['action'];

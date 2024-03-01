@@ -10,5 +10,8 @@
             "App\\Validation\\": "app/validation",
             "Database\\Migrations\\": "database/migrations"
         }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
     }
 }
